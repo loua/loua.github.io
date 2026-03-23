@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,41 @@
             margin: 40px;
             text-align: center;
         }
+
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(2, 1fr);
+            /* Force 2 x 2 grid */
             gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            /* center grid */
         }
+
         .card {
             border: 1px solid #ccc;
             padding: 20px;
             border-radius: 10px;
         }
+
+        .section-heading {
+            grid-column: span 2;
+            /* span across both columns */
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+
         .qr-placeholder img {
             width: 150px;
             height: 150px;
             object-fit: contain;
             margin: 10px auto;
         }
+
         .qr-placeholder {
             margin: 10px auto;
         }
+
         a {
             display: block;
             margin-top: 10px;
@@ -36,47 +53,79 @@
         }
     </style>
 </head>
+
 <body>
 
-    <h1>Explore These Resources</h1>
+    <h1>Enjoy These Resources!</h1>
 
+    <div class="section-heading">
+        <h2>Get AI Ready</h2>
+    </div>
     <div class="container">
 
         <div class="card">
-            <h3>AI & Data Trends (Gartner)</h3>
-            <div class="qr-placeholder">QR Code Here</div>
-            <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-11-gartner-announces-top-predictions-for-data-and-analytics-in-2026" target="_blank">
-                View Article
+            <h3>Future Jobs Need AI</h3>
+            <div class="qr-placeholder">
+                <img src="assets/future_jobs_need_ai.png" alt="Future Jobs Need AI">
+            </div>
+            <a href="https://www.gartner.com/en/newsroom/press-releases/2026-03-11-gartner-announces-top-predictions-for-data-and-analytics-in-2026"
+                target="_blank">
+                View Gartner Article
             </a>
         </div>
 
         <div class="card">
-            <h3>Program Information</h3>
+            <h3>Applied AI Minor for Everyone</h3>
             <div class="qr-placeholder">
                 <img src="assets/applied_ai_minor.png" alt="Program Info QR Code">
             </div>
-            <a href="http://catalog.northcentralcollege.edu/preview_program.php?catoid=30&poid=4922&returnto=3047" target="_blank">
-                View Program
+            <a href="http://catalog.northcentralcollege.edu/preview_program.php?catoid=30&poid=4922&returnto=3047"
+                target="_blank">
+                View AI Minor Program
             </a>
         </div>
-
+        <div class="section-heading">
+            <h2>New INFS Courses</h2>
+        </div>
         <div class="card">
-            <h3>Course: INFS 100</h3>
-            <div class="qr-placeholder">QR Code Here</div>
-            <a href="http://catalog.northcentralcollege.edu/content.php?filter%5B27%5D=INFS&filter%5B29%5D=100&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=30&expand=&navoid=3043&search_database=Filter&filter%5Bexact_match%5D=1#acalog_template_course_filter" target="_blank">
+            <h3>New Course: INFS 100 Digital Well Being (2 credits)</h3>
+            <div class="qr-placeholder">
+                <img src="assets/infs_100.png" alt="INFS 100 Digital Well Being">
+            </div>
+            <a href="http://catalog.northcentralcollege.edu/content.php?filter%5B27%5D=INFS&filter%5B29%5D=100&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=30&expand=&navoid=3043&search_database=Filter&filter%5Bexact_match%5D=1#acalog_template_course_filter"
+                target="_blank">
                 View Course Details
             </a>
         </div>
 
         <div class="card">
-            <h3>Course: INFS 135</h3>
-            <div class="qr-placeholder">QR Code Here</div>
-            <a href="http://catalog.northcentralcollege.edu/content.php?filter%5B27%5D=INFS&filter%5B29%5D=135&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=30&expand=&navoid=3043&search_database=Filter&filter%5Bexact_match%5D=1#acalog_template_course_filter" target="_blank">
+            <h3>New Course: INFS 135 Introduction to Computer Gaming and Game Design (4 credits)</h3>
+            <div class="qr-placeholder">
+                <img src="assets/infs_135.png" alt="INFS 135 Intro to Computer Gaming">
+            </div>
+            <a href="http://catalog.northcentralcollege.edu/content.php?filter%5B27%5D=INFS&filter%5B29%5D=135&filter%5Bcourse_type%5D=-1&filter%5Bkeyword%5D=&filter%5B32%5D=1&filter%5Bcpage%5D=1&cur_cat_oid=30&expand=&navoid=3043&search_database=Filter&filter%5Bexact_match%5D=1#acalog_template_course_filter"
+                target="_blank">
                 View Course Details
             </a>
         </div>
+
+        <div class="section-heading">
+            <h2>Have a Watch Party</h2>
+        </div>
+        <div class="card">
+            <h3>The Social Dilemma</h3>
+            <div class="qr-placeholder">
+                <img src="assets/social_dilemma.png" alt="Social Dilemma">
+            </div>
+            <a href="https://socialdilemma.com"
+                target="_blank">
+                View Movie Details
+            </a>
+        </div>
+
 
     </div>
 
 </body>
+
 </html>
